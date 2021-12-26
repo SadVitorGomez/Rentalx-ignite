@@ -20,6 +20,7 @@
     "prettier/prettier": "error",
     "no-console": "off",
     "no-useless-constructor": "off",
+    "enforceForClassFields": false,
 
     "import/extensions": [
       "error",

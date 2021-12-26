@@ -4,5 +4,10 @@
   "host": "localhost",
   "username": "docker",
   "password": "12349876",
-  "database": "rentx"
+  "database": "rentx",
+  "entities": ["./src/modules/**/entities/*ts"],
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }

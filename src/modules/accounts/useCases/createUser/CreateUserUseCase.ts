@@ -5,6 +5,7 @@ import {
   ICreateUsersDTO,
   IUsersRepository,
 } from "../../repositories/IUsersRepository";
+import AppError from "../../../../errors/AppError";
 
 @injectable()
 export default class CreateUserUseCase {
@@ -22,7 +23,7 @@ export default class CreateUserUseCase {
     const userAlreadyExists = await this.usersRepository.findByEmail(email);
 
     if (userAlreadyExists) {
-      throw new Error(`${email} already exists`);
+      throw new AppError(`${email} already exists`);
     }
 
     const passwordHash = await hash(password, 8);

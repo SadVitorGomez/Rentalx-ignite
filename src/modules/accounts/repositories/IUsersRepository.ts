@@ -1,10 +1,12 @@
 import User from "../entities/User";
 
 interface ICreateUsersDTO {
+  id?: string;
   name: string;
   email: string;
   password: string;
   driver_license: string;
+  avatar?: string;
 }
 
 interface IUsersRepository {
